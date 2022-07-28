@@ -9,6 +9,7 @@ import { RegisterComponent } from './component/pages/register/register.component
 import { LoginComponent } from './component/pages/login/login.component';
 import { DashboardComponent } from './component/dashboard/dashboard/dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
     DashboardComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes)
