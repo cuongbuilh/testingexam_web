@@ -8,7 +8,14 @@ import { HomeComponent } from './component/pages/home/home.component';
 import { RegisterComponent } from './component/pages/register/register.component';
 import { LoginComponent } from './component/pages/login/login.component';
 import { DashboardComponent } from './component/dashboard/dashboard/dashboard.component';
+import { Routes, RouterModule } from '@angular/router';
 
+const routes: Routes = [
+  {path:'', component: HomeComponent},
+  {path:'register', component: RegisterComponent},
+  {path:'login', component: LoginComponent},
+  {path:'dashboard', component: DashboardComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +27,8 @@ import { DashboardComponent } from './component/dashboard/dashboard/dashboard.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
