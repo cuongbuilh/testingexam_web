@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  loading: any;
-  errorMessage: any;
+  loading = false;
+  errorMessage = "";
   formdata = {
     name: '',
     email: '',
@@ -18,5 +18,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit() {}
+  onSubmit() {
+    this.loading = true;
+  }
 }

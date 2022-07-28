@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -6,7 +7,8 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+  http: HttpClient) { }
 
   isAuthenticated(): boolean{
     if((sessionStorage.getItem('token') !== null)) return true
@@ -17,5 +19,9 @@ export class AuthService {
     if(!this.isAuthenticated()){
       this.router.navigate(['/login']);
     }
+  }
+
+  register(name: string, email: string, password: string) {
+    // this.http.post();
   }
 }
