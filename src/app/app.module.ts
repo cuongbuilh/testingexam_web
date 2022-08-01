@@ -3,23 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './component/dashboard/navbar/navbar.component';
-import { HomeComponent } from './component/pages/home/home.component';
-import { RegisterComponent } from './component/pages/register/register.component';
-import { LoginComponent } from './component/pages/login/login.component';
-import { DashboardComponent } from './component/dashboard/dashboard/dashboard.component';
+import { NavbarComponent } from './shared/layout/navbar/navbar.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './component/dashboard/footer/footer.component';
-import { MenuComponent } from './component/dashboard/menu/menu.component';
-import { MarkListComponent } from './component/pages/mark/mark-list/mark-list.component';
-import { ExamTopComponent } from './component/pages/exam/exam-top/exam-top.component';
+import { MenuComponent } from './shared/layout/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatTableModule} from '@angular/material/table';
-import { MarkTopListComponent } from './component/pages/top-mark/mark-top-list/mark-top-list.component';
-import { QuestionTopListComponent } from './component/pages/question/question-top-list/question-top-list.component';
 import { NgChartsModule } from 'ng2-charts';
+import { ExamTopComponent } from './pages/exam/exam-top/exam-top.component';
+import { MarkListComponent } from './pages/mark/mark-list/mark-list.component';
+import { QuestionTopListComponent } from './pages/question/question-top-list/question-top-list.component';
+import { MarkTopListComponent } from './pages/top-mark/mark-top-list/mark-top-list.component';
+import { HomeComponent } from './pages/home/home.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+import { HeaderComponent } from './shared/layout/header/header.component';
+import { FooterComponent } from './shared/layout/footer/footer.component';
+import { TableComponent } from './component/mat-table/table.component';
+import { MatDialogComponent } from './component/mat-dialog/mat-dialog.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -40,7 +43,10 @@ const routes: Routes = [
     MarkListComponent,
     ExamTopComponent,
     MarkTopListComponent,
-    QuestionTopListComponent
+    QuestionTopListComponent,
+    HeaderComponent,
+    TableComponent,
+    MatDialogComponent
   ],
   imports: [
     FormsModule,
