@@ -1,0 +1,26 @@
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: maina; }
+.item4 { grid-area: righta; }
+.item5 { grid-area: mainb; }
+.item6 { grid-area: rightb; }
+.item7 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header'
+    'menu maina maina righta righta'
+    'menu mainb mainb rightb rightb'
+    'menu footer footer footer footer';
+  gap: 10px;
+  background-color: grey;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

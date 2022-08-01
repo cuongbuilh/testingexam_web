@@ -10,7 +10,16 @@ import { LoginComponent } from './component/pages/login/login.component';
 import { DashboardComponent } from './component/dashboard/dashboard/dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './component/dashboard/footer/footer.component';
+import { MenuComponent } from './component/dashboard/menu/menu.component';
+import { MarkListComponent } from './component/pages/mark/mark-list/mark-list.component';
+import { ExamTopComponent } from './component/pages/exam/exam-top/exam-top.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {MatTableModule} from '@angular/material/table';
+import { MarkTopListComponent } from './component/pages/top-mark/mark-top-list/mark-top-list.component';
+import { QuestionTopListComponent } from './component/pages/question/question-top-list/question-top-list.component';
+import { NgChartsModule } from 'ng2-charts';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -25,14 +34,23 @@ const routes: Routes = [
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent,
+    MenuComponent,
+    MarkListComponent,
+    ExamTopComponent,
+    MarkTopListComponent,
+    QuestionTopListComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatTableModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
