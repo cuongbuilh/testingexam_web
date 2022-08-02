@@ -23,6 +23,8 @@ import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { TableComponent } from './component/mat-table/table.component';
 import { MatDialogComponent } from './component/mat-dialog/mat-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ComDetailComponent } from './component/com-detail/com-detail.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -46,7 +48,8 @@ const routes: Routes = [
     QuestionTopListComponent,
     HeaderComponent,
     TableComponent,
-    MatDialogComponent
+    MatDialogComponent,
+    ComDetailComponent
   ],
   imports: [
     FormsModule,
@@ -56,7 +59,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatTableModule,
-    NgChartsModule
+    NgChartsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
