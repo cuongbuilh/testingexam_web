@@ -19,8 +19,8 @@ export class TableComponent implements OnInit {
 
   showDetail(item: any) {
     console.log(item);
-    this.dialog.open(ComDetailComponent);
-
-    
+    // this.dialog.open(ComDetailComponent, {
+    //   data: item
+    // });
   }
 }
