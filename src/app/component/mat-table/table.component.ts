@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { ComDetailComponent } from '../com-detail/com-detail.component';
 
 @Component({
   selector: 'app-table',
@@ -11,12 +13,14 @@ export class TableComponent implements OnInit {
   @Input() title: any;
   @Input() isHideColumn: boolean = false;
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
   showDetail(item: any) {
     console.log(item);
+    this.dialog.open(ComDetailComponent);
+
     
   }
 }

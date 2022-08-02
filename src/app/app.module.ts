@@ -22,7 +22,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { TableComponent } from './component/mat-table/table.component';
-import { MatDialogComponent } from './component/mat-dialog/mat-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ComDetailComponent } from './component/com-detail/com-detail.component';
 
@@ -48,7 +47,6 @@ const routes: Routes = [
     QuestionTopListComponent,
     HeaderComponent,
     TableComponent,
-    MatDialogComponent,
     ComDetailComponent
   ],
   imports: [
